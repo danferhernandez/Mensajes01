@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Mensaje</title>
+<link href="recursos/faw/web-fonts-with-css/css/fontawesome-all.css"
+	rel="stylesheet" type="text/css" />
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+	integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+	crossorigin="anonymous">
+<link rel="stylesheet" href="recursos/css/bootstrap.min.css" />
+</head>
+<body background="recursos/img/mens.jpg"
+	style="background-size: cover; background-repeat: no-repeat">
+	<div class="container">
+		<div class=".col-6 .col-md-5">
+			<header style="margin-top: 1%">
+				<img src="recursos/img/logo.png" alt="" style="height: 80px;">
+				<label class="font-italic"
+					style="font-size: 25px; color: whitesmoke; margin-left: 25px;">
+					Mensajeria</label>
+			</header>
+			<!--Inicio nav-->
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+				<a class="navbar-brand" href="index.html"><img
+					src="recursos/img/123.png" width="40" height="40"
+					class="d-inline-block align-top" alt="Logo Bootstrap">Inicio</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse"
+					data-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item"><a class="nav-link" href="#">Registro
+								Mensaje</a></li>
+					</ul>
+				</div>
+			</nav>
+			<!--Fin nav-->
+			<!--Inicio de registro mensaje-->
+			<div class="row" id="cmensajes" style="margin-left: 1%;">
+				<div class=".col-6 .col-md-4" style="margin-top: 1%;">
+					<h1 style="font-size: 25px;">Registro de mensajes</h1>
+					<div class="form-group">
+						<label for="a">Usuario</label> <select class="form-control"
+							id="user" >
+							<option>Seleccionar Usuario</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="a">Titulo</label><input type="text"
+							placeholder="Ingrese Titulo" class="form-control" name="titu"
+							id="titulo">
+					</div>
+					<div class="form-group">
+						<label for="a">Descripcion</label><input type="text"
+							placeholder="Ingrese Descripcion" class="form-control"
+							name="descr" id="descripcion"><input type="hidden" name="id"
+							id="id" value="0">
+					</div>
+					<div class="form-group">
+						<button style="margin-left: 70%;" id="boton"
+							class="btn btn-primary" onclick="registrar()">Enviar</button>
+					</div>
+				</div>
+				<div class=".col-6 .col-md-4">
+					<table class="table table-borderless" id="tablita"
+						style="margin-left: 10%; margin-top: 3%;">
+						<thead>
+							<tr style="background-color: lightblue;">
+								<th scope="col">#</th>
+								<th scope="col">Usuario</th>
+								<th scope="col">Titulo</th>
+								<th scope="col">Descripcion</th>
+								<th scope="col" colspan="2">Accion</th>
+							</tr>
+						</thead>
+						<tbody>
+
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!--Fin de registro mensaje-->
+
+			<!--Modificar registro mensaje-->
+			<div class="modal fade" id="modificarModal" tabindex="-1" role="dialog"
+				aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLabel">Modificar mensaje</h5>
+							<button type="button" class="close" data-dismiss="modal"
+								aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<form>
+								<div class="form-group">
+									<label for="recipient-name" class="col-form-label">Usuario:</label>
+									<input type="text" class="form-control" id="user2" disabled="disabled">
+								</div>
+								<div class="form-group">
+									<label for="message-text" class="col-form-label">Titulo:</label>
+									<textarea class="form-control" id="titulo2"></textarea>
+								</div>
+								<div class="form-group">
+									<label for="message-text" class="col-form-label">Descripcion:</label>
+									<textarea class="form-control" id="descripcion2"></textarea>
+								</div>
+							</form>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary"
+								data-dismiss="modal">Close</button>
+							<button type="button" class="btn btn-primary" onclick="update()">Modificar Mensaje</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--Fin Modificar registro mensaje-->
+		</div>
+	</div>
+	<script src="recursos/js/jquery-3.4.0.min.js"></script>
+	<script src="recursos/js/bootstrap.min.js"></script>
+	<script src="recursos/js/bootbox.min.js"></script>
+	<script src="recursos/js/script.js"></script>
+</body>
+</html>
